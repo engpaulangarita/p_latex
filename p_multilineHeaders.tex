@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[
+  height=9in,      % height of the text block
+  width=7in,       % width of the text block
+  top=78pt,        % distance of the text block from the top of the page
+  headheight=48pt, % height for the header block
+  headsep=12pt,    % distance from the header block to the text block
+  heightrounded,   % ensure an integer number of lines
+  showframe,       % show the main blocks
+  verbose,         % show the values of the parameters in the log file
+]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+
+\fancyhead[L]{Left Header \\ 2nd left header \\ 3rd left header \\ 4th left header}
+\fancyhead[R]{Right Header \\ 2nd right header \\ \  \\ Skipped 3rd}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\textit{Left footer}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{lipsum}
+
+\begin{document}
+\lipsum[1-20]
+\end{document}
